@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100" role="img" aria-label="Luxury SUV in a showroom">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#5f6f7d"/>
+      <stop offset=".48" stop-color="#232b35"/>
+      <stop offset="1" stop-color="#11151c"/>
+    </linearGradient>
+    <linearGradient id="car" x1="0" x2="1">
+      <stop offset="0" stop-color="#eff2f4"/>
+      <stop offset=".42" stop-color="#bfc7ce"/>
+      <stop offset=".72" stop-color="#f8fafb"/>
+      <stop offset="1" stop-color="#747e89"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="1">
+      <stop offset="0" stop-color="#101923"/>
+      <stop offset="1" stop-color="#4a5b67"/>
+    </linearGradient>
+  </defs>
+  <rect width="1800" height="1100" fill="url(#sky)"/>
+  <path d="M0 755 C270 700 560 695 890 730 C1200 765 1470 735 1800 665 L1800 1100 L0 1100 Z" fill="#202733"/>
+  <path d="M200 820 C520 760 980 748 1610 805" fill="none" stroke="#9aa3aa" stroke-width="3" opacity=".32"/>
+  <g transform="translate(260 430)">
+    <path d="M130 290 C170 170 345 82 585 62 C795 45 1005 96 1116 190 C1240 205 1330 262 1358 352 L1368 391 L63 391 L77 344 C84 318 101 301 130 290 Z" fill="url(#car)"/>
+    <path d="M402 108 C500 76 690 75 819 93 C895 104 970 143 1034 206 L787 212 L342 205 C356 160 374 127 402 108 Z" fill="url(#glass)"/>
+    <path d="M565 91 L528 211" stroke="#dfe5e9" stroke-width="9" opacity=".5"/>
+    <path d="M830 99 L875 209" stroke="#dfe5e9" stroke-width="9" opacity=".45"/>
+    <path d="M75 343 C228 366 470 372 735 359 C980 347 1202 337 1357 356 L1368 391 L63 391 Z" fill="#d7dce0"/>
+    <path d="M107 289 C183 286 257 294 330 313" fill="none" stroke="#ffffff" stroke-width="11" opacity=".75"/>
+    <path d="M1070 268 C1162 266 1245 284 1318 326" fill="none" stroke="#ffffff" stroke-width="10" opacity=".55"/>
+    <g>
+      <circle cx="308" cy="391" r="103" fill="#151a22"/>
+      <circle cx="308" cy="391" r="58" fill="#aeb6bf"/>
+      <circle cx="308" cy="391" r="22" fill="#303844"/>
+      <circle cx="1087" cy="391" r="103" fill="#151a22"/>
+      <circle cx="1087" cy="391" r="58" fill="#aeb6bf"/>
+      <circle cx="1087" cy="391" r="22" fill="#303844"/>
+    </g>
+    <path d="M47 393 L1395 393" stroke="#11151c" stroke-width="18"/>
+  </g>
+  <rect x="1370" y="110" width="210" height="56" rx="8" fill="#c9292f" opacity=".92"/>
+  <rect x="1320" y="190" width="360" height="10" fill="#d9dde1" opacity=".34"/>
+  <rect x="1320" y="218" width="250" height="10" fill="#d9dde1" opacity=".28"/>
+</svg>
