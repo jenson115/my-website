@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoCanvas | 汽车商品生图工作台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="AutoCanvas 首页">
+        <span class="brand-mark">AC</span>
+        <span>AutoCanvas</span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#inventory">车辆库</a>
+        <a href="#generator">生图中心</a>
+        <a href="#templates">模板</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <a class="nav-action" href="#generator">开始生成</a>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/hero-car.svg" alt="" />
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">CAR DEALER IMAGE STUDIO</p>
+          <h1>上传车辆资料，一键生成高质感汽车销售图</h1>
+          <p class="hero-copy">
+            适合二手车商、出口车商、经销商团队，把详情页、车辆照片和报价快速变成广告图、朋友圈图和独立站商品图。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#generator">进入工作台</a>
+            <a class="ghost-button" href="#inventory">查看示例车辆</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section inventory" id="inventory">
+        <div class="section-heading">
+          <p class="eyebrow">LIVE INVENTORY</p>
+          <h2>在售车辆展示</h2>
+        </div>
+        <div class="vehicle-grid">
+          <article class="vehicle-card">
+            <div class="vehicle-photo vehicle-photo-1"></div>
+            <div class="vehicle-info">
+              <span class="tag">现车</span>
+              <h3>Toyota Land Cruiser 300</h3>
+              <p>2023 · 12,800 km · 3.5T · 黑色</p>
+              <strong>$86,900</strong>
+            </div>
+          </article>
+          <article class="vehicle-card">
+            <div class="vehicle-photo vehicle-photo-2"></div>
+            <div class="vehicle-info">
+              <span class="tag">热卖</span>
+              <h3>Mercedes-Benz GLE 450</h3>
+              <p>2022 · 24,000 km · 3.0T · 银灰</p>
+              <strong>$72,500</strong>
+            </div>
+          </article>
+          <article class="vehicle-card">
+            <div class="vehicle-photo vehicle-photo-3"></div>
+            <div class="vehicle-info">
+              <span class="tag">新到</span>
+              <h3>Lexus LX 600 VIP</h3>
+              <p>2024 · 4,600 km · 3.5T · 珍珠白</p>
+              <strong>$118,000</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="workspace" id="generator">
+        <div class="section-heading">
+          <p class="eyebrow">IMAGE GENERATOR</p>
+          <h2>商品生图工作台</h2>
+        </div>
+
+        <div class="generator-shell">
+          <form class="control-panel" id="vehicleForm">
+            <div class="panel-block">
+              <div class="block-title">
+                <span class="step">1</span>
+                <h3>上传资料</h3>
+              </div>
+              <label class="upload-box" for="detailUpload">
+                <input id="detailUpload" type="file" accept="image/*,.pdf" />
+                <span class="upload-icon">+</span>
+                <span>上传商品详情页或配置截图</span>
+                <small id="detailName">支持图片或 PDF</small>
+              </label>
+              <label class="upload-box compact" for="photoUpload">
+                <input id="photoUpload" type="file" accept="image/*" multiple />
+                <span class="upload-icon">+</span>
+                <span>批量上传车辆图片</span>
+                <small id="photoCount">建议 5-20 张</small>
+              </label>
+              <div class="thumb-row" id="thumbRow" aria-label="已上传图片"></div>
+            </div>
+
+            <div class="panel-block">
+              <div class="block-title">
+                <span class="step">2</span>
+                <h3>车辆信息</h3>
+              </div>
+              <div class="field-grid">
+                <label>车型名称<input id="modelName" type="text" value="Toyota Land Cruiser 300" /></label>
+                <label>销售价格<input id="price" type="text" value="$86,900" /></label>
+                <label>年份<input id="year" type="text" value="2023" /></label>
+                <label>里程<input id="mileage" type="text" value="12,800 km" /></label>
+                <label>发动机<input id="engine" type="text" value="3.5T Twin Turbo" /></label>
+                <label>所在地<input id="location" type="text" value="Dubai / Ready Stock" /></label>
+              </div>
+              <label>
+                亮点卖点
+                <textarea id="highlights">Clean title, premium leather, full service history, export ready.</textarea>
+              </label>
+            </div>
+
+            <div class="panel-block">
+              <div class="block-title">
+                <span class="step">3</span>
+                <h3>选择模板</h3>
+              </div>
+              <div class="template-options" id="templateOptions">
+                <button class="template-button active" type="button" data-template="premium">豪华主图</button>
+                <button class="template-button" type="button" data-template="sale">促销报价</button>
+                <button class="template-button" type="button" data-template="social">社媒方图</button>
+              </div>
+              <button class="primary-button full" type="submit">生成海报</button>
+            </div>
+          </form>
+
+          <aside class="preview-panel">
+            <div class="preview-toolbar">
+              <div>
+                <p class="eyebrow">PREVIEW</p>
+                <h3>生成结果</h3>
+              </div>
+              <button class="icon-button" id="downloadBtn" type="button" title="下载海报" aria-label="下载海报">↓</button>
+            </div>
+            <canvas id="posterCanvas" width="1080" height="1350"></canvas>
+            <div class="result-actions">
+              <button class="ghost-button" id="randomizeBtn" type="button">换一版排版</button>
+              <button class="primary-button" id="copyPromptBtn" type="button">复制生图提示词</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section templates" id="templates">
+        <div class="section-heading">
+          <p class="eyebrow">TEMPLATES</p>
+          <h2>适合车商的出图类型</h2>
+        </div>
+        <div class="template-grid">
+          <article><span>01</span><h3>车型主图</h3><p>用于独立站商品页、WhatsApp 首图和广告封面。</p></article>
+          <article><span>02</span><h3>价格促销图</h3><p>突出价格、库存状态、到港或出口信息。</p></article>
+          <article><span>03</span><h3>配置亮点图</h3><p>展示年份、里程、发动机、内饰和卖点。</p></article>
+          <article><span>04</span><h3>社媒套图</h3><p>自动适配方图、竖图和横幅广告尺寸。</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <div>
+        <strong>AutoCanvas</strong>
+        <p>汽车销售商专用商品图生成工具</p>
+      </div>
+      <a class="nav-action" href="#generator">上传车辆资料</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
